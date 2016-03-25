@@ -1,0 +1,65 @@
+@prefix a: <http://users.jyu.fi/~jiayang/compound.rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://users.jyu.fi/~jiayang/compound.rdf> .
+
+
+
+
+
+
+a:AlCl3 rdf:type a:compound ;
+         a:hasAl "1"^^xsd:int ;
+  
+         a:HasElementOf a:chlorine-Cl .
+
+
+a:FeCl3 rdf:type a:compound ;
+               a:HasElementOf a:chlorine-Cl .
+
+a:FeCl2 rdf:type a:compound ;
+               a:HasElementOf a:chlorine-Cl .
+
+a:ZnCl2 rdf:type a:compound ;
+               a:HasElementOf a:chlorine-Cl .
+
+a:CuO2 rdf:type a:compound ;
+        a:hasO "1"^^xsd:int ;
+               a:HasElementOf a:oxygen-O .
+
+a:SiO2 rdf:type a:compound ;
+       a:hasSi "1"^^xsd:int ;
+       a:hasO "2"^^xsd:int ;
+               a:HasElementOf a:oxygen-O .
+
+a:CO2 rdf:type a:compound ;
+     a:hasO "2"^^xsd:int ;
+     a:hasC "1"^^xsd:int ;
+               a:HasElementOf a:oxygen-O .
+
+a:CH4 rdf:type a:compound ;
+      a:hasC "1"^^xsd:int ;
+      a:hasH "4"^^xsd:int ;
+               a:HasElementOf a:hydrogen-H .
+
+
+a:C2H4 rdf:type a:compound ;
+      a:hasC "2"^^xsd:int ;
+      a:hasH "4"^^xsd:int ;
+               a:HasElementOf a:hydrogen-H .
+
+a:C2H2 rdf:type a:compound ;
+       a:hasC "2"^^xsd:int ;
+      a:hasH "2"^^xsd:int ;
+               a:HasElementOf a:hydrogen-H .
+
+a:KH rdf:type a:compound ;
+     a:hasK "1"^^xsd:int ;
+      a:hasH "1"^^xsd:int ;
+               a:HasElementOf a:hydrogen-H .
+
+
+
+
+

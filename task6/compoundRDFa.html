@@ -1,0 +1,71 @@
+<html lang="en">
+<body>
+<div xmlns="http://www.w3.org/1999/xhtml"
+  prefix="
+    a: http://users.jyu.fi/~jiayang/compound.rdf#
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    xsd: http://www.w3.org/2001/XMLSchema#
+    rdfs: http://www.w3.org/2000/01/rdf-schema#"
+  >
+  <h1>Simple Chemistry Ontology cases with RDFa</h1>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#SiO2">
+    <div property="a:hasSi" datatype="xsd:int" content="1"></div>
+    <div property="a:hasO" datatype="xsd:int" content="2"></div>
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#oxygen-O"></div>
+    SiO2   has   1   Si;   has   2   O.
+  </div>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#CH4">
+    <div property="a:hasH" datatype="xsd:int" content="4"></div>
+    <div property="a:hasC" datatype="xsd:int" content="1"></div>
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#hydrogen-H"></div>
+    CH4   has   1   C;   has   2   4 H.
+  </div>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#KH">
+    <div property="a:hasH" datatype="xsd:int" content="1"></div>
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#hydrogen-H"></div>
+    <div property="a:hasK" datatype="xsd:int" content="1"></div>
+    KH   hasElementOf  K, has   1   K;   hasElementOf  H, has   1   H.
+  </div>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#AlCl3">
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#chlorine-Cl"></div>
+    <div property="a:hasAl" datatype="xsd:int" content="1"></div>
+    AlCl3   hasElementOf  Al, has   1   Al.
+  </div>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#FeCl2">
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#chlorine-Cl"></div>
+    FeCl2   hasElementOf  Fe.
+  </div>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#C2H4">
+    <div property="a:hasC" datatype="xsd:int" content="2"></div>
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#hydrogen-H"></div>
+    <div property="a:hasH" datatype="xsd:int" content="4"></div>
+    C2H4   hasElementOf  C, has   2   C;   hasElementOf  H, has   4   H.
+  </div>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#CuO2">
+    <div property="a:hasO" datatype="xsd:int" content="1"></div>
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#oxygen-O"></div>
+    CuO2 hasElementOf  O, has   1   O.
+  </div>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#FeCl3">
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#chlorine-Cl"></div>
+    FeCl3   hasElementOf  Cl.
+  </div>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#C2H2">
+    <div property="a:hasC" datatype="xsd:int" content="2"></div>
+    <div property="a:hasH" datatype="xsd:int" content="2"></div>
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#hydrogen-H"></div>
+    C2H2   hasElementOf  C, has   2   C;   hasElementOf  H, has   2  H.
+  </div>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#CO2">
+    <div property="a:hasC" datatype="xsd:int" content="1"></div>
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#oxygen-O"></div>
+    <div property="a:hasO" datatype="xsd:int" content="2"></div>
+    CO2   hasElementOf  C, has   1   C;   hasElementOf  O, has   2  O.
+  </div>
+  <div typeof="a:compound" about="http://users.jyu.fi/~jiayang/compound.rdf#ZnCl2">
+    <div rel="a:HasElementOf" resource="http://users.jyu.fi/~jiayang/compound.rdf#chlorine-Cl"></div>
+  </div>
+  ZnCl2   hasElementOf  Cl.
+</div>
+</body>
+</html>

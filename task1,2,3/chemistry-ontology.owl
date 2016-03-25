@@ -1,0 +1,573 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY chemistry-ontology "http://users.jyu.fi/~jiayang/chemistry-ontology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://users.jyu.fi/~jiayang/chemistry-ontology.owl#"
+     xml:base="http://users.jyu.fi/~jiayang/chemistry-ontology.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:chemistry-ontology="http://users.jyu.fi/~jiayang/chemistry-ontology.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://users.jyu.fi/~jiayang/chemistry-ontology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#HasElementOf -->
+
+    <owl:ObjectProperty rdf:about="&chemistry-ontology;HasElementOf">
+        <rdfs:range rdf:resource="&chemistry-ontology;chemical_element"/>
+        <rdfs:domain rdf:resource="&chemistry-ontology;product"/>
+        <rdfs:domain rdf:resource="&chemistry-ontology;reactant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#canReleaseHeat -->
+
+    <owl:ObjectProperty rdf:about="&chemistry-ontology;canReleaseHeat"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasProductsOf -->
+
+    <owl:ObjectProperty rdf:about="&chemistry-ontology;hasProductsOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&chemistry-ontology;product"/>
+        <rdfs:domain rdf:resource="&chemistry-ontology;reactant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasSimple_substance -->
+
+    <owl:ObjectProperty rdf:about="&chemistry-ontology;hasSimple_substance">
+        <rdfs:domain rdf:resource="&chemistry-ontology;chemical_element"/>
+        <owl:inverseOf rdf:resource="&chemistry-ontology;isSimple_substanceOf"/>
+        <rdfs:range rdf:resource="&chemistry-ontology;simple_substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#isReactedFrom -->
+
+    <owl:ObjectProperty rdf:about="&chemistry-ontology;isReactedFrom">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <owl:inverseOf rdf:resource="&chemistry-ontology;hasProductsOf"/>
+        <rdfs:domain rdf:resource="&chemistry-ontology;product"/>
+        <rdfs:range rdf:resource="&chemistry-ontology;reactant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#isSimple_substanceOf -->
+
+    <owl:ObjectProperty rdf:about="&chemistry-ontology;isSimple_substanceOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&chemistry-ontology;chemical_element"/>
+        <rdfs:domain rdf:resource="&chemistry-ontology;simple_substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#underConditionOf -->
+
+    <owl:ObjectProperty rdf:about="&chemistry-ontology;underConditionOf">
+        <rdfs:domain rdf:resource="&chemistry-ontology;reactant"/>
+        <rdfs:range rdf:resource="&chemistry-ontology;reactant_condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasAl -->
+
+    <owl:DatatypeProperty rdf:about="&chemistry-ontology;hasAl"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasCl -->
+
+    <owl:DatatypeProperty rdf:about="&chemistry-ontology;hasCl"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasColourOf -->
+
+    <owl:DatatypeProperty rdf:about="&chemistry-ontology;hasColourOf"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasFe -->
+
+    <owl:DatatypeProperty rdf:about="&chemistry-ontology;hasFe"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasH -->
+
+    <owl:DatatypeProperty rdf:about="&chemistry-ontology;hasH"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasK -->
+
+    <owl:DatatypeProperty rdf:about="&chemistry-ontology;hasK"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasMn -->
+
+    <owl:DatatypeProperty rdf:about="&chemistry-ontology;hasMn"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasO -->
+
+    <owl:DatatypeProperty rdf:about="&chemistry-ontology;hasO"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hasPoison -->
+
+    <owl:DatatypeProperty rdf:about="&chemistry-ontology;hasPoison"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#biological_method -->
+
+    <owl:Class rdf:about="&chemistry-ontology;biological_method">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;reactant_condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#catalyst -->
+
+    <owl:Class rdf:about="&chemistry-ontology;catalyst">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;reactant_condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#chemical_element -->
+
+    <owl:Class rdf:about="&chemistry-ontology;chemical_element"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#compound -->
+
+    <owl:Class rdf:about="&chemistry-ontology;compound">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;reactant"/>
+        <owl:disjointWith rdf:resource="&chemistry-ontology;simple_substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#gas -->
+
+    <owl:Class rdf:about="&chemistry-ontology;gas"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#liquid -->
+
+    <owl:Class rdf:about="&chemistry-ontology;liquid"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#metal_element -->
+
+    <owl:Class rdf:about="&chemistry-ontology;metal_element">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;chemical_element"/>
+        <owl:disjointWith rdf:resource="&chemistry-ontology;non_metal_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#metal_simple_substance -->
+
+    <owl:Class rdf:about="&chemistry-ontology;metal_simple_substance">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;simple_substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#non_Oxide_compound -->
+
+    <owl:Class rdf:about="&chemistry-ontology;non_Oxide_compound">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;compound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#non_metal_element -->
+
+    <owl:Class rdf:about="&chemistry-ontology;non_metal_element">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;chemical_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#non_metal_substance -->
+
+    <owl:Class rdf:about="&chemistry-ontology;non_metal_substance">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;simple_substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#oxide_compound -->
+
+    <owl:Class rdf:about="&chemistry-ontology;oxide_compound">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;compound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#physical_method -->
+
+    <owl:Class rdf:about="&chemistry-ontology;physical_method">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;reactant_condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#product -->
+
+    <owl:Class rdf:about="&chemistry-ontology;product">
+        <owl:equivalentClass rdf:resource="&chemistry-ontology;reactant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#reactant -->
+
+    <owl:Class rdf:about="&chemistry-ontology;reactant"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#reactant_condition -->
+
+    <owl:Class rdf:about="&chemistry-ontology;reactant_condition"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#simple_substance -->
+
+    <owl:Class rdf:about="&chemistry-ontology;simple_substance">
+        <rdfs:subClassOf rdf:resource="&chemistry-ontology;reactant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#solid -->
+
+    <owl:Class rdf:about="&chemistry-ontology;solid"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#substanceWithColour -->
+
+    <owl:Class rdf:about="&chemistry-ontology;substanceWithColour"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#substanceWithPoison -->
+
+    <owl:Class rdf:about="&chemistry-ontology;substanceWithPoison"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#substanceWithoutColour -->
+
+    <owl:Class rdf:about="&chemistry-ontology;substanceWithoutColour"/>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#substanceWithoutPoison -->
+
+    <owl:Class rdf:about="&chemistry-ontology;substanceWithoutPoison"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#Al -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;Al">
+        <rdf:type rdf:resource="&chemistry-ontology;metal_simple_substance"/>
+        <rdf:type rdf:resource="&chemistry-ontology;solid"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithColour"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithPoison"/>
+        <hasAl rdf:datatype="&xsd;int">1</hasAl>
+        <isSimple_substanceOf rdf:resource="&chemistry-ontology;Aluminium-Al"/>
+        <HasElementOf rdf:resource="&chemistry-ontology;Aluminium-Al"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#Al2O3 -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;Al2O3">
+        <rdf:type rdf:resource="&chemistry-ontology;oxide_compound"/>
+        <rdf:type rdf:resource="&chemistry-ontology;solid"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithColour"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithPoison"/>
+        <hasAl rdf:datatype="&xsd;int">2</hasAl>
+        <hasO rdf:datatype="&xsd;int">3</hasO>
+        <hasPoison rdf:datatype="&xsd;boolean">false</hasPoison>
+        <HasElementOf rdf:resource="&chemistry-ontology;Aluminium-Al"/>
+        <HasElementOf rdf:resource="&chemistry-ontology;oxygen-O"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#Aluminium-Al -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;Aluminium-Al">
+        <rdf:type rdf:resource="&chemistry-ontology;metal_element"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#Cl2 -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;Cl2">
+        <rdf:type rdf:resource="&chemistry-ontology;non_metal_substance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#Cu -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;Cu">
+        <rdf:type rdf:resource="&chemistry-ontology;metal_simple_substance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#F2 -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;F2">
+        <rdf:type rdf:resource="&chemistry-ontology;non_metal_substance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#Fe2O3 -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;Fe2O3">
+        <rdf:type rdf:resource="&chemistry-ontology;oxide_compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#Fe3O4 -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;Fe3O4">
+        <rdf:type rdf:resource="&chemistry-ontology;oxide_compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#H2 -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;H2">
+        <rdf:type rdf:resource="&chemistry-ontology;gas"/>
+        <rdf:type rdf:resource="&chemistry-ontology;non_metal_substance"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithPoison"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithoutColour"/>
+        <hasH rdf:datatype="&xsd;int">2</hasH>
+        <HasElementOf rdf:resource="&chemistry-ontology;hydrogen-H"/>
+        <isSimple_substanceOf rdf:resource="&chemistry-ontology;hydrogen-H"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#H2O -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;H2O">
+        <rdf:type rdf:resource="&chemistry-ontology;liquid"/>
+        <rdf:type rdf:resource="&chemistry-ontology;oxide_compound"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithoutColour"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithoutPoison"/>
+        <hasO rdf:datatype="&xsd;int">1</hasO>
+        <hasH rdf:datatype="&xsd;int">2</hasH>
+        <HasElementOf rdf:resource="&chemistry-ontology;hydrogen-H"/>
+        <HasElementOf rdf:resource="&chemistry-ontology;oxygen-O"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#H4C -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;H4C">
+        <rdf:type rdf:resource="&chemistry-ontology;non_Oxide_compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#HCl -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;HCl">
+        <rdf:type rdf:resource="&chemistry-ontology;non_Oxide_compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#KCl -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;KCl">
+        <rdf:type rdf:resource="&chemistry-ontology;non_Oxide_compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#N2 -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;N2">
+        <rdf:type rdf:resource="&chemistry-ontology;non_metal_substance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#O2 -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;O2">
+        <rdf:type rdf:resource="&chemistry-ontology;gas"/>
+        <rdf:type rdf:resource="&chemistry-ontology;non_metal_substance"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithPoison"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithoutColour"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithoutPoison"/>
+        <hasO rdf:datatype="&xsd;int">2</hasO>
+        <isSimple_substanceOf rdf:resource="&chemistry-ontology;oxygen-O"/>
+        <HasElementOf rdf:resource="&chemistry-ontology;oxygen-O"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#O3 -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;O3">
+        <rdf:type rdf:resource="&chemistry-ontology;gas"/>
+        <rdf:type rdf:resource="&chemistry-ontology;non_metal_substance"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithColour"/>
+        <rdf:type rdf:resource="&chemistry-ontology;substanceWithPoison"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#Zn -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;Zn">
+        <rdf:type rdf:resource="&chemistry-ontology;metal_simple_substance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#enzyme -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;enzyme">
+        <rdf:type rdf:resource="&chemistry-ontology;biological_method"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#heat -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;heat">
+        <rdf:type rdf:resource="&chemistry-ontology;physical_method"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#hydrogen-H -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;hydrogen-H">
+        <rdf:type rdf:resource="&chemistry-ontology;non_metal_element"/>
+        <hasSimple_substance rdf:resource="&chemistry-ontology;H2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#light -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;light">
+        <rdf:type rdf:resource="&chemistry-ontology;physical_method"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#manganese_dioxide -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;manganese_dioxide">
+        <rdf:type rdf:resource="&chemistry-ontology;catalyst"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://users.jyu.fi/~jiayang/chemistry-ontology.owl#oxygen-O -->
+
+    <owl:NamedIndividual rdf:about="&chemistry-ontology;oxygen-O">
+        <rdf:type rdf:resource="&chemistry-ontology;non_metal_element"/>
+        <hasSimple_substance rdf:resource="&chemistry-ontology;O2"/>
+        <hasSimple_substance rdf:resource="&chemistry-ontology;O3"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

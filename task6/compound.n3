@@ -1,0 +1,57 @@
+@prefix a: <http://users.jyu.fi/~jiayang/compound.rdf#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+a:AlCl3 a a:compound ;
+    a:HasElementOf a:chlorine-Cl ;
+    a:hasAl "1"^^xsd:int .
+
+a:C2H2 a a:compound ;
+    a:HasElementOf a:hydrogen-H ;
+    a:hasC "2"^^xsd:int ;
+    a:hasH "2"^^xsd:int .
+
+a:C2H4 a a:compound ;
+    a:HasElementOf a:hydrogen-H ;
+    a:hasC "2"^^xsd:int ;
+    a:hasH "4"^^xsd:int .
+
+a:CH4 a a:compound ;
+    a:HasElementOf a:hydrogen-H ;
+    a:hasC "1"^^xsd:int ;
+    a:hasH "4"^^xsd:int .
+
+a:CO2 a a:compound ;
+    a:HasElementOf a:oxygen-O ;
+    a:hasC "1"^^xsd:int ;
+    a:hasO "2"^^xsd:int .
+
+a:CuO2 a a:compound ;
+    a:HasElementOf a:oxygen-O ;
+    a:HasElementOf a:Cu ;
+    a:hasO "1"^^xsd:int .
+
+a:FeCl2 a a:compound ;
+a:HasElementOf a:Fe2 ;
+    a:HasElementOf a:chlorine-Cl .
+
+a:FeCl3 a a:compound ;
+a:HasElementOf a:Fe3;
+    a:HasElementOf a:chlorine-Cl .
+
+a:KH a a:compound ;
+    a:HasElementOf a:hydrogen-H ;
+    a:hasH "1"^^xsd:int ;
+    a:hasK "1"^^xsd:int .
+
+a:SiO2 a a:compound ;
+a:HasElementOf a:Si;
+    a:HasElementOf a:oxygen-O ;
+    a:hasO "2"^^xsd:int ;
+    a:hasSi "1"^^xsd:int .
+
+a:ZnCl2 a a:compound ;
+    a:HasElementOf a:chlorine-Cl .
